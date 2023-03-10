@@ -30,4 +30,13 @@ fun main() {
         println(i)
         i++
     }
+
+
+    loop@ for (i in 1..10) {
+        println("i $i")
+        loopsegundo@ for (j in 1..10) {
+            println("j $j")
+            if (j == 5) break@loopsegundo
+        }
+    }
 }
