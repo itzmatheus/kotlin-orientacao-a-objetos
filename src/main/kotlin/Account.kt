@@ -1,22 +1,22 @@
 import java.lang.Exception
 
 data class Account(
-    var owner: Owner? = null,
-    val number: Int? = null,
-    var balance: Float = 0.0f,
+    private var owner: Owner? = null,
+    private val number: Int? = null,
+    private var balance: Float = 0.0f,
 ) {
 
-    fun withdraw(amount: Float) {
-
-        if (!isAmountAvailableToTake(amount)) {
-            throw Exception("DENIED! You just have ${this.balance} of balance.")
+    fun withdraw(value: Float) {
+        if (!isAmountAvailableToTake(value)) {
+            throw Exception("DENIED! You just have ${getBalance()} of balance.")
         }
-
-        this.balance -= amount
+        val amount = getBalance() - value
+        setBalance(amount)
     }
 
-    fun deposit(amount: Float) {
-        this.balance += amount
+    fun deposit(value: Float) {
+        val amount = getBalance() + value
+        setBalance(amount)
     }
 
     fun transfer(accountDestination: Account, amount: Float) {
@@ -26,6 +26,18 @@ data class Account(
 
     private fun isAmountAvailableToTake(
         amountRequired: Float
-    ) = amountRequired <= this.balance
+    ) = amountRequired <= getBalance()
+
+    fun getOwner(): Owner? {
+        return owner
+    }
+
+    private fun setBalance(value: Float) {
+        this.balance = value
+    }
+
+    fun getBalance(): Float {
+        return balance
+    }
 
 }
