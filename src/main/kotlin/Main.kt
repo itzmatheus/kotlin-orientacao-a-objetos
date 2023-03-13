@@ -8,7 +8,7 @@ fun main() {
 
     val ownerTwo = Owner()
     ownerTwo.name = "Pathfinder Zemo"
-    val accountTwo = Account(ownerTwo, 20000, 1000.0f)
+    val accountTwo = Account(owner = ownerTwo, number = 20000, balance = 1000.0f)
     println(accountTwo.getOwner()?.name)
     println(accountTwo)
 
