@@ -1,9 +1,7 @@
-class Employer(
+open class Employer(
     val name: String,
     val cpf: String,
     val salary: Double,
 ) {
-    fun addBonus(): Double {
-        return  salary * 0.1
-    }
+    open val getBonus: Double get() = salary * 0.1
 }

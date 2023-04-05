@@ -7,14 +7,15 @@ fun main() {
     println("name: ${johnDoe.name}")
     println("cpf: ${johnDoe.cpf}")
     println("salary: ${johnDoe.salary}")
-    print("extra: ${johnDoe.addBonus()}")
+    println("extra: ${johnDoe.getBonus}")
 
+    println()
     val franRegis = Manager("Fran Regis", "000.000.000-00", 1500.0, "123456")
 
     println("name: ${franRegis.name}")
     println("cpf: ${franRegis.cpf}")
     println("salary: ${franRegis.salary}")
-    println("extra: ${franRegis.addBonus()}")
+    println("extra: ${franRegis.getBonus}")
 
     if (franRegis.authenticate()) {
         println("${franRegis.name} is authenticated!")
@@ -22,6 +23,19 @@ fun main() {
         println("${franRegis.name} is NOT authenticated!")
     }
 
+    println()
+    val joanDoe = Director("Joan Doe", "123.456.543.89", 2000.00, "1234567", 1000.00)
+    println("name: ${joanDoe.name}")
+    println("cpf: ${joanDoe.cpf}")
+    println("salary: ${joanDoe.salary}")
+    println("extra: ${joanDoe.getBonus}")
+    println("plr: ${joanDoe.plr}")
+
+    if (joanDoe.authenticate()) {
+        println("${joanDoe.name} is authenticated!")
+    } else {
+        println("${joanDoe.name} is NOT authenticated!")
+    }
 
 }
 
