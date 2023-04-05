@@ -7,7 +7,7 @@ class Director(
 ): Employer(name = name, salary = salary, cpf = cpf) {
     override val getBonus: Double
         get() {
-            return salary * 0.2
+            return super.getBonus + salary + plr
         }
 
     fun authenticate(): Boolean {
