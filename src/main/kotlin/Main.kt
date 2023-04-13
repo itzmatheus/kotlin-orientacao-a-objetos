@@ -37,5 +37,22 @@ fun main() {
         println("${joanDoe.name} is NOT authenticated!")
     }
 
+    println()
+    val maria = Analyst(name = "maria", cpf = "0123456789", salary = 2000.0)
+    println("name: ${maria.name}")
+    println("cpf: ${maria.cpf}")
+    println("salary: ${maria.salary}")
+    println("extra: ${maria.getBonus}")
+
+
+    val calculatorBonus = CalculatorBonus()
+    calculatorBonus.register(johnDoe)
+    calculatorBonus.register(franRegis)
+    calculatorBonus.register(joanDoe)
+    calculatorBonus.register(maria)
+
+    println()
+    println("total of bonus: ${calculatorBonus.total}")
+
 }
 
