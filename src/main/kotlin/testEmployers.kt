@@ -1,11 +1,4 @@
 fun testEmployers() {
-    val johnDoe = Employer("John Doe", "012.345.678-90", 1000.0)
-
-    println("name: ${johnDoe.name}")
-    println("cpf: ${johnDoe.cpf}")
-    println("salary: ${johnDoe.salary}")
-    println("extra: ${johnDoe.getBonus}")
-
     println()
     val franRegis = Manager("Fran Regis", "000.000.000-00", 1500.0, "123456")
 
@@ -43,7 +36,6 @@ fun testEmployers() {
 
 
     val calculatorBonus = CalculatorBonus()
-    calculatorBonus.register(johnDoe)
     calculatorBonus.register(franRegis)
     calculatorBonus.register(joanDoe)
     calculatorBonus.register(maria)
