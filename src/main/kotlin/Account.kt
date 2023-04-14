@@ -1,12 +1,12 @@
 import java.lang.Exception
 
-data class Account(
+open class Account(
     private var owner: Owner? = null,
     private val number: Int? = null,
     private var balance: Float = 0.0f,
 ) {
 
-    fun withdraw(value: Float) {
+    open fun withdraw(value: Float) {
         if (!isAmountAvailableToTake(value)) {
             throw Exception("DENIED! You just have ${getBalance()} of balance.")
         }
