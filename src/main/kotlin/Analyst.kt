@@ -5,7 +5,7 @@ class Analyst(
 ): Employer(name = name, salary = salary, cpf = cpf) {
     override val getBonus: Double
         get() {
-            return super.getBonus + salary * 0.1
+            return salary * 0.1
         }
 
 }

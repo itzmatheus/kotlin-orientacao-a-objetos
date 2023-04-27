@@ -6,7 +6,7 @@ class Manager(
 ): Employer(name = name, salary = salary, cpf = cpf) {
     override val getBonus: Double
         get() {
-            return super.getBonus + salary
+            return salary
         }
 
     fun authenticate(): Boolean {
