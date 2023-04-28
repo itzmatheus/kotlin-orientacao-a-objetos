@@ -9,6 +9,8 @@ class CheckingAccount(
 ) {
     override fun withdraw(value: Float) {
         val valueWithTax: Float = value + 0.1f
-        super.withdraw(valueWithTax)
+        if (this.getBalance() >= valueWithTax) {
+            this.setBalance(this.getBalance() - valueWithTax)
+        }
     }
 }

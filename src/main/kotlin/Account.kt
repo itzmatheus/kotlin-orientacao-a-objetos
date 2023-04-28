@@ -1,18 +1,10 @@
-import java.lang.Exception
-
-open class Account(
+abstract class Account(
     private var owner: Owner? = null,
     private val number: Int? = null,
     private var balance: Float = 0.0f,
 ) {
 
-    open fun withdraw(value: Float) {
-        if (!isAmountAvailableToTake(value)) {
-            throw Exception("DENIED! You just have ${getBalance()} of balance.")
-        }
-        val amount = getBalance() - value
-        setBalance(amount)
-    }
+    abstract fun withdraw(value: Float)
 
     fun deposit(value: Float) {
         val amount = getBalance() + value
@@ -24,15 +16,11 @@ open class Account(
         accountDestination.deposit(amount)
     }
 
-    private fun isAmountAvailableToTake(
-        amountRequired: Float
-    ) = amountRequired <= getBalance()
-
     fun getOwner(): Owner? {
         return owner
     }
 
-    private fun setBalance(value: Float) {
+    protected fun setBalance(value: Float) {
         this.balance = value
     }
 

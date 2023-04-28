@@ -1,13 +1,13 @@
 fun testaComportamentos() {
     val ownerOne = Owner()
     ownerOne.name = "John Doe"
-    val accountOne = Account(ownerOne, 1000, 1000.0f)
+    val accountOne = CheckingAccount(ownerOne, 1000, 1000.0f)
     println(accountOne.getOwner()?.name)
     println(accountOne)
 
     val ownerTwo = Owner()
     ownerTwo.name = "Pathfinder Zemo"
-    val accountTwo = Account(owner = ownerTwo, number = 20000, balance = 1000.0f)
+    val accountTwo = SavingAccount(owner = ownerTwo, number = 20000, balance = 1000.0f)
     println(accountTwo.getOwner()?.name)
     println(accountTwo)
 

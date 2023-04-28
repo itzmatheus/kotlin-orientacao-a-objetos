@@ -7,4 +7,9 @@ class SavingAccount(
     number = number,
     balance = balance
 ) {
+    override fun withdraw(value: Float) {
+        if (this.getBalance() >= value) {
+            this.setBalance(this.getBalance() - value)
+        }
+    }
 }
