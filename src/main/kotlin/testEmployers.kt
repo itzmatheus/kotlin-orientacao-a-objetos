@@ -7,7 +7,7 @@ fun testEmployers() {
     println("salary: ${franRegis.salary}")
     println("extra: ${franRegis.getBonus}")
 
-    if (franRegis.authenticate()) {
+    if (franRegis.authenticate("123456")) {
         println("${franRegis.name} is authenticated!")
     } else {
         println("${franRegis.name} is NOT authenticated!")
@@ -21,7 +21,7 @@ fun testEmployers() {
     println("extra: ${joanDoe.getBonus}")
     println("plr: ${joanDoe.plr}")
 
-    if (joanDoe.authenticate()) {
+    if (joanDoe.authenticate("123456")) {
         println("${joanDoe.name} is authenticated!")
     } else {
         println("${joanDoe.name} is NOT authenticated!")

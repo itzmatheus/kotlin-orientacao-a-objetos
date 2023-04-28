@@ -2,19 +2,11 @@ class Director(
     name: String,
     cpf: String,
     salary: Double,
-    val password: String,
+    password: String,
     val plr: Double
-): Employer(name = name, salary = salary, cpf = cpf) {
+): EmployerAdmin(name = name, salary = salary, cpf = cpf, password = password) {
     override val getBonus: Double
         get() {
             return salary + plr
         }
-
-    fun authenticate(): Boolean {
-        if (password == "1234567") {
-            return true
-        }
-        return false
-    }
-
 }
