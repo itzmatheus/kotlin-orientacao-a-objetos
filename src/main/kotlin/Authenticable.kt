@@ -1,3 +1,4 @@
 interface Authenticable {
-    fun authenticate(password: String): Boolean
+    val password: String
+    fun authenticate(password: String): Boolean = this.password == password
 }

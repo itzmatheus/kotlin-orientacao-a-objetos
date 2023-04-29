@@ -9,9 +9,13 @@ class Director(
     salary = salary,
     cpf = cpf,
     password = password
-) {
+), Authenticable{
     override val getBonus: Double
         get() {
             return salary + plr
         }
+
+    override fun authenticate(password: String): Boolean {
+        return super<EmployerAdmin>.authenticate(password)
+    }
 }
