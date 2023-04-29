@@ -7,4 +7,7 @@ fun testLogin() {
     val system = InternalSystem()
     system.login(manager, "1234565")
     system.login(director, "1234567")
+
+    val client = Client(name = "client", "333333", "000000")
+    system.login(client, "000000")
 }

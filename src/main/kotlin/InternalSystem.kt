@@ -1,6 +1,6 @@
 class InternalSystem {
 
-    fun login(admin: EmployerAdmin, password: String) {
+    fun login(admin: Authenticable, password: String) {
         if(admin.authenticate(password)) {
             println("authenticated")
         } else {

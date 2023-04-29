@@ -3,8 +3,8 @@ abstract class EmployerAdmin(
     cpf: String,
     salary: Double,
     val password: String,
-): Employer(name = name, cpf = cpf, salary = salary) {
+): Employer(name = name, cpf = cpf, salary = salary), Authenticable {
 
-    fun authenticate(password: String): Boolean = this.password == password
+    override fun authenticate(password: String): Boolean = this.password == password
 
 }
