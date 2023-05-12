@@ -1,3 +1,5 @@
+package model
+
 class SavingAccount(
     owner: Owner,
     number: Int?,

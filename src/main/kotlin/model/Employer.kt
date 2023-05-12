@@ -1,3 +1,5 @@
+package model
+
 abstract class Employer(
     val name: String,
     val cpf: String,

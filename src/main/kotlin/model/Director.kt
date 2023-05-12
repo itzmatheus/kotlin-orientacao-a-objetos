@@ -1,3 +1,5 @@
+package model
+
 class Director(
     name: String,
     cpf: String,
@@ -9,7 +11,7 @@ class Director(
     salary = salary,
     cpf = cpf,
     password = password
-), Authenticable{
+), Authenticable {
     override val getBonus: Double
         get() {
             return salary + plr

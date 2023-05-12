@@ -1,3 +1,5 @@
+package model
+
 abstract class EmployerAdmin(
     name: String,
     cpf: String,

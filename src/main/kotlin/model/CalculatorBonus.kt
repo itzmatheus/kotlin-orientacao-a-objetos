@@ -1,3 +1,5 @@
+package model
+
 class CalculatorBonus {
 
     var total: Double = 0.0

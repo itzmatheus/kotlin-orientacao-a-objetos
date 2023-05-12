@@ -1,3 +1,10 @@
+package test
+
+import model.Analyst
+import model.CalculatorBonus
+import model.Director
+import model.Manager
+
 fun testEmployers() {
     println()
     val franRegis = Manager("Fran Regis", "000.000.000-00", 1500.0, "123456")

@@ -1,3 +1,5 @@
+package model
+
 abstract class Account(
     private var owner: Owner? = null,
     private val number: Int? = null,

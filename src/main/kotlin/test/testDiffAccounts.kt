@@ -1,3 +1,9 @@
+package test
+
+import model.CheckingAccount
+import model.Owner
+import model.SavingAccount
+
 fun testDiffAccounts() {
     val owner = Owner()
     owner.name = "John Doe"

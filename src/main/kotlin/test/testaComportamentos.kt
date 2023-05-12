@@ -1,3 +1,9 @@
+package test
+
+import model.CheckingAccount
+import model.Owner
+import model.SavingAccount
+
 fun testaComportamentos() {
     val ownerOne = Owner()
     ownerOne.name = "John Doe"

@@ -1,3 +1,5 @@
+package test
+
 fun main() {
     println("Bem vindo ao Bytebank")
 

@@ -1,3 +1,5 @@
+package model
+
 class Manager(
     name: String,
     cpf: String,

@@ -1,3 +1,5 @@
+package model
+
 class Assistant(
     name: String,
     cpf: String,

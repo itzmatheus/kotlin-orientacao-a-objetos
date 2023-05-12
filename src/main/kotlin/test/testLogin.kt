@@ -1,3 +1,12 @@
+package test
+
+import model.Client
+import model.Director
+import model.InternalSystem
+import model.Manager
+
+// fully qualified name
+
 fun testLogin() {
     println("Bem vindo ao ByteBank")
     val manager = Manager(name = "fulano", cpf = "00000", salary = 1000.0, password = "1234565")

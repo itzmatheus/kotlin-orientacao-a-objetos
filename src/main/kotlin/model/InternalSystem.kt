@@ -1,3 +1,5 @@
+package model
+
 class InternalSystem {
 
     fun login(admin: Authenticable, password: String) {
